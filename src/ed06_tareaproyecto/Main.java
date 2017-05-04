@@ -14,15 +14,19 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Empleado uno = new Empleado("1245678M","Perico de los Palotes");
+        Empleado empleado1 = new Empleado("1245678M","Perico de los Palotes");
         
-        uno.direccion="C/del Pez,6";
-        uno.numHijos=3;
-        System.out.println("DNI: "+uno.dni);
-        System.out.println("Nombre: "+uno.nombre);
-        System.out.println("Cargo: "+uno.cargo);
-        System.out.println("Número de hijos: "+uno.numHijos);
-        System.out.println("Sueldo: "+uno.calcula_sueldo(1200));
+        imprimir_emp(empleado1);
+    }
+
+    private static void imprimir_emp(Empleado empleado1) {
+        empleado1.direccion="C/del Pez,6";
+        empleado1.setNumHijos(3);
+        System.out.println("DNI: "+empleado1.getDni());
+        System.out.println("Nombre: "+empleado1.getNombre());
+        System.out.println("Cargo: "+empleado1.getCargo());
+        System.out.println("Número de hijos: "+empleado1.getNumHijos());
+        System.out.println("Sueldo: "+empleado1.calcula_sueldo(1200));
     }
     
 }
